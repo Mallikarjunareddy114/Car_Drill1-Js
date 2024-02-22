@@ -3,6 +3,7 @@
 
 let inventory=require('./DataForInventory');
 function bmwaudi(data){
+    if(Array.isArray(data)){
     let empty=[]
     for (let index = 0; index < data.length; index++) {
        if(data[index].car_make==="BMW" || data[index].car_make==="Audi"){
@@ -12,5 +13,8 @@ function bmwaudi(data){
     }
     return empty;
 }
-let cars=bmwaudi(inventory);
-console.log(cars);
+}
+// let cars=bmwaudi(inventory);
+// console.log(cars);
+
+module.exports=bmwaudi;

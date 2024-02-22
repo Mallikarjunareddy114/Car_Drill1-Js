@@ -4,7 +4,11 @@
 
 let inventory=require('./DataForInventory');
 function lastCar(data){
+    if(Array.isArray(data)){
     return data[data.length-1]
 }
-let result=lastCar(inventory);
-console.log(result);
+}
+// let result=lastCar(inventory);
+// console.log(result);
+
+module.exports=lastCar;

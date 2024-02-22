@@ -5,11 +5,15 @@
 
 let inventory=require('./DataForInventory');
 function carid(data){
-for (const car of data) {
-    if(car.id === 33){
-        return car;
+if(Array.isArray(data)){
+    for (const car of data) {
+        if(car.id === 33){
+            return car;
+        }
     }
 }
 }
-let result=carid(inventory);
-console.log(result);
+// let result=carid(inventory);
+// console.log(result);
+
+ module.exports=carid;

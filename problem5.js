@@ -3,6 +3,7 @@
 
 let inventory=require('./DataForInventory');
 function howmanycars(data){
+    if(Array.isArray(data)){
     let result=[]
     for (let index = 0; index < data.length; index++) {
         if(data[index].car_year < 2000){
@@ -11,6 +12,8 @@ function howmanycars(data){
     }
     return result;
     }
-    let view=howmanycars(inventory)
-    console.log(view);
-    console.log(view.length);
+}
+    // let view=howmanycars(inventory)
+    // console.log(view);
+    // console.log(view.length);
+    module.exports=howmanycars;
